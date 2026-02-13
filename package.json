@@ -1,0 +1,58 @@
+{
+  "name": "arebeast-backend",
+  "version": "2.0.0",
+  "description": "God-tier clustered Node.js backend — Neon, Turso, Backblaze B2, Cloudinary, Firebase, Socket.IO",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "node --max-old-space-size=512 --expose-gc index.js",
+    "dev": "NODE_ENV=development node --watch index.js",
+    "prod": "NODE_ENV=production node --max-old-space-size=512 --expose-gc index.js",
+    "test": "node --test tests/**/*.test.js",
+    "bench": "node scripts/bench.js",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.10",
+    "@sentry/node": "^7.105.0",
+    "@socket.io/cluster-adapter": "^0.2.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "firebase-admin": "^11.11.1",
+    "google-auth-library": "^9.0.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "node-cache": "^5.1.2",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.11.3",
+    "socket.io": "^4.7.5",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "autocannon": "^7.12.0"
+  },
+  "author": "Om Khade",
+  "license": "MIT",
+  "keywords": [
+    "social-media", "scalable", "high-performance",
+    "node.js", "clustering", "websocket", "production",
+    "neon", "turso", "firebase", "cloudinary", "backblaze"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arebeast/backend"
+  }
+}
